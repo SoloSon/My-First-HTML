@@ -377,15 +377,15 @@ input, textarea {
      <section class="select" id="nav-sec">
        <nav>
         <ul>
-         <li><a href="#firstLi">Home</a></li>
-         <li><a href="#Tabl">Tags</a></li>                  
-         <li><a href="#progRess">Languages</a></li>
-         <li><a href="#htmImg">Review</a></li>
-         <li><a href="#conTact"">Contact</a></li>
+         <li><a href="#home">Home</a></li>
+         <li><a href="#First-Column">Tags</a></li>                  
+         <li><a href="#table">Languages</a></li>
+         <li><a href="#progress-bar">Review</a></li>
+         <li><a href="#contact-form"">Contact</a></li>
         </ul>
        </nav>
      </section>
-     
+
      <!-- Navbar Section ends from here-->
 
       <!-- Header starts from here-->
