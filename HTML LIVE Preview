@@ -1,0 +1,559 @@
+<!Doctype HTML>
+<html>
+  <head>
+    <title>HTML Live Page</title>
+    <meta charset='UTF-8'/>
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+    <link rel='stylesheet' href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script></script>
+    <style>
+      
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Handlee', cursive;
+    font-size: 13pt;
+    background:#eaeaea;
+    /*background: linear-gradient(120deg,
+    rgba(255,255,255,0)0%,
+    rgba(255,255,255,0.2)25%,
+    rgba(255,255,255,0.2)75%,
+    rgba(255,255,255,0)100%);
+    box-shadow: inset 3px 5px 7px #555,
+    -5px -3px -8px;*/
+}
+
+.section {
+    background: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 22px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.select {
+    margin: 10px 5px 10px 5px;
+    padding:20px;
+    border-radius:5px;
+    background-color: #fefefe;
+    /*background: linear-gradient(skyblue 20%, blue 20%, green 80%, blue 80%);*/
+}
+
+#clock-time {
+    color: #3fb6b2;
+    font-size: 20px;
+    font-family: calibri, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#img-header {
+    background-image: url("https://img.freepik.com/free-vector/gradient-dynamic-wavy-background_52683-74595.jpg");
+    background-size: cover;
+    height: 150px;
+    position: relative;
+    padding:30px 0px 5px 0px;
+}
+
+#img-header img{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    animation-name: Header-Img;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1ms;
+}
+
+ @keyframes Header-Img{
+      10%{
+        transform: rotate(360deg);
+      }
+      90%{
+          background-color: #dfdfdf;
+          border-color: #bfbfbf;
+      }
+    }
+
+#img-header p {
+    font-size: 30px;
+    text-align: center;
+    color: #ffccee;
+    text-shadow: 2px 2px 5px #000;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgb(0,0,0,0.3);
+    background-clip: padding-box;
+
+}
+
+h1 {
+    font-size: 15pt;
+    text-align: center;
+    color: #20bcd9;
+    padding: 18px 0 18px 0;
+    margin: 0 0 20px 0;
+}
+
+h1 span {
+    border: 4px dashed #cecece; /*#20bcd5;*/
+    padding: 10px;
+}
+
+h2,h4,h5 {
+    color: #cecece;
+    font-family: monospace;
+    text-align:center;
+    border: 4px solid #cecece;
+    border-radius: 5px;
+    border-style: dashed;
+    padding:8px 5px;
+    box-shadow: 1px 1px 1px;
+}
+
+h6  {
+    color: #cecece;
+    font-family:monospace;
+    text-align:center;
+    border: 4px solid #cecece;
+    border-radius: 10px;
+    border-style: dashed;
+    padding: 10px;
+    animation-name: Header-H6;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-delay: 1ms;
+}
+
+@keyframes Header-H6{
+    0%{
+        background-color: #cfcfcf;
+    }
+    
+    50%{
+        background-color: #2F5A78;
+        color: #fcfcfc;
+    }
+    
+    70%{
+        opacity: 0.9;
+    }
+}
+
+#nav-sec {
+    text-align: center;
+    background-color: #fefefe;
+}
+
+#nav-sec ul {
+    margin-left:0px;
+    padding:0px;
+}
+
+#nav-sec li {
+    display: inline;
+    font-size:18px;
+    font-family:monospace;
+    font-weight:bold;
+    text-align:center;
+    margin-top:15px;
+    list-style: none;
+}
+
+#nav-sec li > a {
+    background:#2f5e7e;
+    color: #cecece;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    box-shadow:1px 1px 3px;
+    font-size: 13px;
+    text-decoration:none;
+    font-family: Helvetica;
+    border:.5px solid #2F785A;
+    border-radius:3px;
+    padding: 5px;
+}
+
+#nav-sec a:hover {
+    transform: scale(0.2);
+    background: #f72F5E;
+    color: #2F5B78;
+    transition-duration: 1s;
+    
+}
+
+#First-Column h3 {
+    font-weight: bolder;
+    color: #cecece;
+    margin: auto;
+}
+
+hr {
+    border: 1px solid #cecece;
+}
+
+#arti-one p {
+    font-weight: bolder;
+    font-family: 'Handlee', cursive;
+    font-size:18px;
+}
+
+table {
+    width:100%;
+    border-collapse:collapse;
+}
+table th, td{
+    border: 3px solid #cecece;
+    text-align:center;
+    table-layout:fixed;
+}
+
+#text-area textarea {
+    color: #2f5e7e;
+    border: 2px solid #cecece;
+    border-radius: 5px;
+    font-size:14px;
+    padding-top: 10px;
+    width: 93%;
+    height: 77px;
+}
+
+#progress-bar li {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+progress {
+    background: #cecece;
+    color: #3fb6b2;
+    height:28px;
+}
+
+progress::-webkit-progress-bar {
+    background: #dcdcdc;
+    
+}
+
+progress::-webkit-progress-value {
+    background: #3fb2b6;
+}
+
+progress::-moz-progress-bar {
+    background: #cecece;
+    color: #3fb6b2;
+}
+
+iframe, audio {
+    display: block;
+    margin: auto;
+    border: 3px solid #2fb6b2;
+}
+
+form {
+    text-align: center;
+    margin-top: 0;
+}
+
+.submit {
+    background: #3fb6b2;
+    color: #fff;
+    padding: 12px 45px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border:none;
+    margin:0;
+}
+
+.submit:hover {
+    background-color: #43a09d;
+    transform: scale(0.8); /*matrix(0, 1, 1, 0, 0, 0);*/
+    /*skew(15deg, 10deg);*/ /*translate(15px, 10px);*//*scale(0.8);*/
+}
+
+textarea {
+    height: 100px;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 10px;
+    border: 1px solid #cecece;
+    background-color: #efefef;
+    color: #787575;
+    border-radius: 5px;
+    width: 70%;
+    outline: none;
+}
+
+.face {
+    transform: scale(0.4);
+    margin: 0 auto;
+    display: block;
+    margin-top: -55px;
+    margin-bottom: -55px;
+    animation-name: Face;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1ms;
+}
+
+ @keyframes Face{
+      0%{
+        transform: translateY(50px);
+      }
+      30%{
+        transform: translateX(-50px);
+      }
+      70%{
+        transform: rotate(360deg);
+      }
+    }
+
+.face:hover {
+    transform: rotate(60deg);
+}
+
+/*
+.face {
+    transform: scale(0.4);
+    margin: 0 auto;
+    display: block;
+    margin-top: -35px;
+    margin-bottom: -25px;
+}
+*/
+
+#follow {
+    height: 130px;
+    text-align:center;
+    text-decoration: none;
+}
+
+#follow a {
+    text-decoration: none;
+}
+
+#follow img {
+    text-align:center;
+}
+
+#follow a:hover {
+    opacity: 50%;
+}
+
+#foot-copy p {
+    color: #cecece;
+    font-weight:bold;
+    font-size: 16px;
+    text-align:center;
+    height: 10px;
+}
+
+    </style>
+  </head>
+  <body class="container">
+   <section class= "select">
+     <div id="clock-time"></div>
+   </section>
+   <div id='img-header' class="section">
+     <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" alt="circle"/>
+     <p>First HTML Page</p>
+     </div>
+     <!--Navbar Section starts from here-->
+     
+     <section class="select" id="nav-sec">
+       <nav>
+        <ul>
+         <li><a href="#firstLi">Home</a></li>
+         <li><a href="#Tabl">Tags</a></li>                  
+         <li><a href="#progRess">Languages</a></li>
+         <li><a href="#htmImg">Review</a></li>
+         <li><a href="#conTact"">Contact</a></li>
+        </ul>
+       </nav>
+     </section>
+     
+     <!-- Navbar Section ends from here-->
+
+      <!-- Header starts from here-->
+     
+     <header class= "select">
+     <h6 style="text-align:center">If you find it is useful then <br /> like & make it <strong>POPULAR!</strong> <br/>Web Development!</h6>
+     </header>
+       <!-- Header ends from here-->
+       
+      <!-- Article section starts from here-->
+      
+     <section class="select">
+     <div id="First-Column">
+       <h1><span>First HTML Page!</span></h1>
+       <hr>
+        <aticle id="arti-one">
+           <p>As we know, how to implement the <strong>HTML</strong> code to bring it on live with
+     the compilers. <br/><br/>
+     
+     As much as we learn from the tendancy of the <i>Web Development's</i> prospects..<br/><br/>
+     
+     In a view of some extraordinary changes come forward into the rows of designs what were performing by the developer of the website!
+           </p>
+         </article>
+     </div>
+     </section>
+   <!-- Article section ends from here-->
+    <!-- Table section starts from here-->
+     <section class="select">
+     <div id="table">
+        <h1><span>Tags</span></h1>
+        <table id="table1">
+         <tr>
+           <th>Name</th>
+           <th>Tags</th>
+         </tr>
+         <tr>
+           <td>Header</td>
+           <td>< header > < /header ></td>
+         </tr>
+         <tr>
+           <td>Head</td>
+           <td>< head > < /head ></td>
+         </tr>
+         <tr>
+           <td>Body</td>
+           <td>< body > < /body ></td>
+         </tr>
+         <tr>
+           <td>Article</td>
+           <td>< article > < /article ></td>
+         </tr>
+         <tr>
+           <td>Caption</td>
+           <td>< caption > < /caption ></td>
+         </tr>
+         <tr>
+           <td>Code</td>
+           <td>< code > < /code ></td>
+         </tr>
+         <tr>
+           <td>Section</td>
+           <td>< section > < /section ></td>
+         </tr>
+           <tr>
+               <td>Footer</td>
+               <td>< footer > < /footer ></td>
+           </tr>
+        </table>
+     </div>
+     </section>
+      <!-- Table section ends from here-->
+ <!-- Text Area section starts from here-->
+     <section class="select" id="text-area">
+     <!--<progress></pregress>-->
+     <textarea>"Here we go, as we can see the info related to HTML & also some other LANGUAGES for the upcoming progress!"</textarea>
+     </section>
+   <!-- Text Area section ends from here-->
+    <!-- List section starts from here-->
+     <section class="select" id="progress-bar">
+     <h1><span>Languages!</span></h1>
+     <ul>
+       <li>HTML <br/>90% <br/><progress min="0" max="100" value="90"></progress></li>
+       <li>CSS<br/>98% <br/><progress min="0" max="100" value="98"></progress></li>
+       <li>JavaScript<br/>60% </br><progress min="0" max="100" value="60"></progress></li>
+       <li>jQuery<br/>85% </br/><progress min="0" max="100" value="85"></progress></li>
+       <li>React.js<br/>30% <br/><progress min="0" max="100" value="30"></progress></li>
+       <li>Angular.js</br>50% <br/><progress min="0" max="100" value="50"></progress></li>
+       <li>MySQL</br>70% <br/><progress min="0" max="100" value="70"></progress></li>
+       <li>PHP<br/>68% <br/><progress min="0" max="100" value="68" ></progress></li>
+       <li>Java<br/>45% <br/><progress min="0" max="100" value="45"></progress></li>
+       <li>#C<br/>38% <br/><progress min="0" max="100" value="38"></progress> </li>
+       <li>C++<br/>90% <br/><progress  min="0" max="100" value="90"></progress></li><br/>
+     </ul>
+     </section>
+    <!-- List section ends from here-->
+   
+    <!-- Youtube video Reviews starts here! -->
+    <section class="select">
+    <h1><span>Youtube</span></h1>
+    <iframe src="https://www.youtube.com/embed/qAZCxFdBWQ8" height="150px" allowfullscreen frameborder="0">
+    </iframe>
+    </section>
+    <!--Youtube video Review ends here! -->
+    
+    <!-- Form section starts from here-->
+    <section class="select">
+      <div id="contact-form">
+        <h1><span>Contact us!</span></h1>
+        <svg class="face" hight="100" width="100">
+          <circle cx="50" cy="50" r="50" fill="#FDD835"/>
+          <circle cx="30" cy="30" r="10" fill="#FFFFFF"/>
+          <circle cx="70" cy="30" r="10" fill="#FFFFFF"/>
+          <circle cx="30" cy="30" r="5" fill="#000000"/>
+          <circle cx="70" cy="30" r="5" fill="#000000"/>
+          <path d="M 30 70 q 20 20 40 0" stroke="#FFFFFF" stroke-width="5" fill="none"/>
+        </svg>
+        <form>
+           <input type="text" placeholder="Name" required/>
+           <br/>
+           <input type="email" placeholder="Email" required/>
+           <br />
+           <textarea type="text" placeholder="Message" required/></textarea>
+           <br />
+           <input type="submit" value="Send" class="submit"/>
+        </form>
+      </div>
+    </section>
+    <!-- Form section ends from here! -->
+   <footer>
+       
+   <!-- Social Media Section starts from here!-->
+   
+     <section class="select" id="follow">
+         <h1><span>Follow us!</span></h1>
+             <a href="https://www.sololearn.com/" target="_blank">
+             <img alt="SoloLearn" src="https://www.sololearn.com/Uploads/icons/sololearn.png" width="50px"/>
+             </a>
+             <a href="https://www.sololearn.com/" target="_blank">
+                    <img alt="SoloLearn" src="https://www.sololearn.com/Uploads/icons/facebook.png" width="50px"/>
+             </a>
+             <a href="https://www.sololearn.com/" target="_blank">
+                    <img alt="SoloLearn" src="https://www.sololearn.com/Uploads/icons/twitter.png" width="50px"/>
+             </a>
+     </section>
+   
+   
+   <!-- Social Media Section ends from here!-->
+   
+   
+   <!-- Copyright Section starts from here!-->
+     <section class="select" id="foot-copy">
+       <p><span>Copyright@2023</span><span> Developed by Sony</span></p>
+    <!-- Copyright Section ends from here!-->
+     </section>
+   </footer>
+   <script>
+     window.onload= function() {
+    function clock() {
+        let d = new Date();
+        let hour = d.getHours();
+        let minute = d.getMinutes();
+        let seconds = d.getSeconds(); document.getElementById("clock-time").innerHTML= "What time is it? " +"<br/>"+ hour + ":" + minute + ":" + seconds;
+    }
+    
+    setInterval(clock, 1000);
+}
+
+   </script>
+  </body>
+</html>
